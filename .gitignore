@@ -1,0 +1,12 @@
+# Emacs junk
+\#*#
+*~
+
+# TeX junk
+*aux
+*log
+*out
+*gz
+master_resume\*pdf
+resume_template\*pdf
+resume_template\*gz

@@ -1,0 +1,190 @@
+% Resume Template 
+% Created by Jean Sung
+% Summer 2014
+% find updates / submit feedback
+% @ https://github.com/jeansung/ResumeCollection
+
+
+
+% % Instructions & how to use
+% 1) fill in resume header details 
+% 2) create resume by using different section styles
+% 3) copy and paste section as needed and fill in
+%    relevant information
+% Notes:
+% -examples are at the bottom of the document, after all
+%	of the section templates 
+% -uncomment examples by pressing CMD/Control + U, 
+%	recomment them by pressing CMD/Control + T
+% -default font is 12pt, can be changed at top of LaTex
+%	document, but remember that a different font means
+%   different places for newlines if you don't want what's
+%	flush with the left to interfere with date column
+% -default setting for date column indentation explained 
+%	below, can be changed
+
+% % Start of Document % %
+\documentclass[12pt]{article}
+\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+\usepackage[margin= 0.5 in]{geometry}
+\usepackage{hyperref}
+\pagenumbering{gobble}
+\normalsize
+
+% % resume header details % %
+\newcommand{\name}{\large\textbf{Gourav Khadge}} % Lovely sample name 
+\newcommand{\addr}{some address}
+\newcommand{\email}{\url{email addr}}
+\newcommand{\phone}{phone number }
+
+% % Information about Indent for Date Colum % %
+% 8.5 inch wide paper (assuming standard US paper size)
+% margin = 0.5 inch (can be changed at the top)
+% date = 1 inch 
+% 8.5 - margin - date Indent = indent for dates [6.5]
+\newcommand{\aligndates}{\hspace*{6.5in}}
+
+% % shortcuts & their descriptions % %
+% header dot 
+% used to seperate address, email and phone on
+% the header of the document
+\newcommand{\headerdot}{  $\bullet$  }
+
+% vb
+% used to seperate items in Section Style Gamma
+\newcommand{\vb}{ $\mid$ }
+
+% sectionNL the newline after a section title
+\newcommand{\sectionNL}{\\[2pt]}
+
+% custom tab & custom tabinline
+% for use with section style beta
+% the first line of a detail in beta is prefixed with \customtab
+% any subsequent lines of a detail start with a \customtabinline
+% after the newline command 
+\newcommand{\customtab}{$\hspace{10pt}\bullet\hspace{2pt}$}
+\newcommand{\customtabinline}{$\hspace{17pt}$}
+
+\begin{document}
+
+% Contact Information 
+\begin{center}
+\name \\
+\addr \headerdot \email \headerdot \phone
+\end{center}
+
+% Section Style Alpha
+% Suggested uses: Education, Awards, Honors, Activities
+% Template: 
+\begin{tabbing}
+\aligndates\= \kill
+{\large \textbf{Section Alpha Title} } \> \sectionNL
+Subsection category 1 \> Month Year \\
+Second Line \> \\ \\
+
+Subsection category 2 \> Season \\
+Second Line \> 
+\end{tabbing}
+
+
+% Section Style Beta
+% Suggested uses: research / work/ volunteer experience
+% Template: 
+\begin{tabbing} 
+\hspace*{6.5in}\= \kill
+{\large \textbf{Section Beta Title} } \> \sectionNL
+Activity Title 1, Location \>Dates \\
+\customtab Detail 1 \\
+
+Activity Title 2, Location \>Dates \\
+\customtab Detail 2 example is really quite long because there are a lot of things I want to say \\ \customtabinline about this activity spills to the new line by using the customtablinline command
+\end{tabbing}
+
+% Section Style Gamma
+% Suggested uses: relevant coursework 
+% Template: 
+\begin{flushleft}
+{\large \textbf{Section Gamma Title }} \sectionNL
+Item 1 \vb Item 2 \vb Item 3, etc 
+\end{flushleft}
+
+% Section Style Delta
+% Suggested uses: Skills list 
+% Template: 
+\begin{flushleft}
+{\large \textbf{Section Delta Title}} \sectionNL
+\textit{Subsection 1:} item 1, item 2, item 3, item 4, etc
+\end{flushleft}
+
+% % Examples % %
+
+%% Alpha Example 1:
+%\begin{tabbing}
+%\aligndates\= \kill
+%{\large \textbf{Section Title} } \> \sectionNL
+%Degree Title \> Month Year \\
+%College or University, City, State \> \\ \\
+%\end{tabbing}
+
+%% Alpha Example 2
+%\begin{tabbing}
+%\hspace*{6.5in}\= \kill
+%{\large \textbf{Awards and Honors} } \> \sectionNL
+%Award 1 \> 1/12 -Present \\
+%Award 2 \> Season Year \\
+%\end{tabbing}
+
+%% Alpha Example 3
+%\begin{tabbing}
+%\hspace*{6.5in}\= \kill
+%{\large \textbf{Activities} } \> \sectionNL
+%Activity 1 \> Dates done \\
+%Activity 2 \> Season \\
+%Activity 3 \> Years \\
+%\end{tabbing}
+
+%% Beta Example 1
+%\begin{tabbing} 
+%\hspace*{6.5in}\= \kill
+%{\large \textbf{Research Experience} } \> \sectionNL
+%Department of XYZ, Generic State School , City, State\>5/13 - 7/13 \\
+%\customtab What you did  \\
+%\customtab What technologies or lab techniques were used \\
+%\customtab End accomplishment or final product
+%\end{tabbing}
+	
+%% Beta Example 2
+%\begin{tabbing} 
+%\hspace*{6.5in}\= \kill
+%{\large \textbf{Work Experience} } \> \sectionNL
+%Job Title 1, Company, Claremont, CA \>9/13 -Present \\
+%\customtab responsibilities and duties of the employee 
+%\end{tabbing}
+
+%% Beta Example 3 
+%\begin{tabbing} 
+%\hspace*{6.5in}\= \kill
+%{\large \textbf{Volunteer Experience} } \> \sectionNL
+%Volunteer Position 1, Organization \>9/12-2/13 \\
+%\customtab duties and accomplishments as a volunteer 
+%\end{tabbing}
+
+%% Gamma Example 1 
+%\begin{flushleft}
+%{\large \textbf{Relevant Coursework}} \sectionNL
+%Software Development \vb Domain Specific Languages \vb Computer Systems \\
+%Discrete Mathematics \vb Data Structures/Program Development \vb Image Processing \\
+%Programming Practicum \vb Principles of CS \vb Introduction to CS \vb Linear Algebra \\ 
+%Differential Equations \vb Multivariable Calculus \vb Mathematics of Voting \\
+%Introduction to Linguistics \vb Physical Chemistry 
+%\end{flushleft}
+
+%% Delta Example 1
+%\begin{flushleft}
+%{\large \textbf{Skills}} \sectionNL
+%\textit{Programming:} C++, Java, Python, Racket, Prolog, MatLab, Unix/ Command Line, C, x86 Assembly\\
+%\textit{Markup:} HTML/CSS, LaTeX \\
+%\textit{Version Control:} Git, Subversion\\
+%\textit{iOS Development:} Objective C, iOS, Cocoa Touch Framework, Cocos 2D, Box2D
+%\end{flushleft}
+\end{document}
