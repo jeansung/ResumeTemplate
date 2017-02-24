@@ -10,3 +10,6 @@
 master_resume\*pdf
 resume_template\*pdf
 resume_template\*gz
+
+# Apple junk
+.DS_Store
